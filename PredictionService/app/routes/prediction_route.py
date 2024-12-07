@@ -18,6 +18,18 @@ def create_prediction(payload: dict):
         return payload
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
+    
+@router.get("/predict")
+def create_prediction():
+    try:
+        # prediction_service = PredictionService(kafka_service)
+        print("hola")
+        # return prediction_service.process_prediction_request(payload)
+        return {
+            "message": "hola"
+        }
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
 
 @router.get("/model/{model_id}")
 def fetch_model(model_id: str, db: Session = Depends(get_db)):

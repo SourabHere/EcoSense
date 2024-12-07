@@ -1,5 +1,6 @@
 package com.ecosense.DataAggregationService.Services.Strategies.StrategyImplementations;
 
+import com.ecosense.DataAggregationService.Services.ClimateClient;
 import com.ecosense.DataAggregationService.Services.Strategies.GenericAggregationStrategy;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,8 @@ public class ClimateServiceAggregationStrategy implements GenericAggregationStra
     @Autowired
     private RestTemplate restTemplate;
 
-    public final String climateApiUrl = "http://localhost:8001/api/v1/weather/historical";
+    @Autowired
+    private ClimateClient climateClient;
 
     @Override
     public JsonNode aggregateData(String startDate, String endDate, Map<String, Object> additionalParams){
@@ -25,8 +27,11 @@ public class ClimateServiceAggregationStrategy implements GenericAggregationStra
             city = (String) additionalParams.getOrDefault("city", null);
         }
 
+        if(additionalParams.containsKey("country")){
+            city = (String) additionalParams.getOrDefault("country", null);
+        }
 
-        String url = String.format("%s/%s?startDate=%s&endDate=%s", climateApiUrl, city, startDate, endDate);
-        return restTemplate.getForObject(url, JsonNode.class);
+        return climateClient.getClimateData(city,startDate,endDate);
+
     }
 }

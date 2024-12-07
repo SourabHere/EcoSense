@@ -43,4 +43,27 @@ public class AggregationController {
         return ResponseEntity.ok(combinedData);
     }
 
+    @GetMapping("/train")
+    public ResponseEntity<JsonNode> trainAggregatedData(
+            @RequestParam String startDate,
+            @RequestParam String endDate,
+            @RequestParam(required = false) String country,
+            @RequestParam(required = false) String scientificName
+    ) {
+
+        Map<String, Object> additionalParams = new HashMap<>();
+
+        if (scientificName != null) {
+            additionalParams.put("scientificName", scientificName);
+        }
+
+        if (country != null){
+            additionalParams.put("country", country);
+        }
+
+
+        JsonNode combinedData = aggregationService.trainAggregatedData(startDate,endDate,additionalParams);
+
+        return ResponseEntity.ok(combinedData);
+    }
 }
