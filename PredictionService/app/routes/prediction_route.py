@@ -7,29 +7,21 @@ from ..models.database import get_db
 
 router = APIRouter()
 
-# kafka_service = KafkaService()
+kafka_service = KafkaService()
 
-@router.post("/predict")
+@router.post("/api/v1/predict")
 def create_prediction(payload: dict):
     try:
-        # prediction_service = PredictionService(kafka_service)
-        print(payload)
-        # return prediction_service.process_prediction_request(payload)
-        return payload
+        prediction_service = PredictionService(kafka_service)
+        return prediction_service.process_prediction_request(payload)
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
     
-@router.get("/predict")
+@router.get("/api/v1/health")
 def create_prediction():
-    try:
-        # prediction_service = PredictionService(kafka_service)
-        print("hola")
-        # return prediction_service.process_prediction_request(payload)
-        return {
-            "message": "hola"
-        }
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
+    return {
+        "message": "Server is UP"
+    }
 
 @router.get("/model/{model_id}")
 def fetch_model(model_id: str, db: Session = Depends(get_db)):

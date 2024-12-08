@@ -12,7 +12,7 @@ eureka_client = EurekaClient(
     eureka_server="http://localhost:8761/eureka/",
     app_name="fastapi-ML-microservice",
     instance_port=8005,
-    instance_ip="localhost"
+    instance_ip="127.0.0.1"
 )
 
 @app.on_event("startup")
@@ -27,7 +27,7 @@ app.add_middleware(
     allow_headers=["*"],     
 )
 
-app.include_router(prediction_route.router, prefix="/api/v1", tags=["Prediction"])
+app.include_router(prediction_route.router, tags=["Prediction"])
 
 
 

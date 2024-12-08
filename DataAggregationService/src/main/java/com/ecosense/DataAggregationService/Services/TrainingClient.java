@@ -12,7 +12,7 @@ public interface TrainingClient {
     @PostMapping("/api/v1/predict")
     JsonNode trainData(@RequestBody JsonNode requestBody);
 
-    @GetMapping("/api/v1/predict")
+    @GetMapping("/api/v1/health")
     JsonNode checkPort();
 
 }

@@ -38,11 +38,6 @@ public class AggregationService {
         return combinedResponse;
     }
 
-    private HttpHeaders createHeaders() {
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_JSON);
-        return headers;
-    }
 
     public JsonNode trainAggregatedData(String startDate, String endDate, Map<String, Object> additionalParams) {
         JsonNode climateData = climateStrategy.aggregateData(startDate, endDate, additionalParams);
@@ -55,10 +50,7 @@ public class AggregationService {
         combinedResponse.put("startDate", startDate);
         combinedResponse.put("endDate", endDate);
 
-
-//        JsonNode res = trainingClient.trainData(combinedResponse);
-        JsonNode res = trainingClient.checkPort();
-
+        JsonNode res = trainingClient.trainData(combinedResponse);
         return res;
     }
 
