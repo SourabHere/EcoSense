@@ -49,6 +49,8 @@ public class AggregationService {
         combinedResponse.set("biodiversity", biodiversityData);
         combinedResponse.put("startDate", startDate);
         combinedResponse.put("endDate", endDate);
+        combinedResponse.put("purpose", "train");
+        combinedResponse.put("location", "Delhi");
 
         JsonNode res = trainingClient.trainData(combinedResponse);
         return res;

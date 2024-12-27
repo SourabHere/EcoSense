@@ -1,0 +1,19 @@
+open kafka
+docker exec -it kafka /bin/bash
+
+check if topic exists
+kafka-topics.sh --list \ --zookeeper zookeeper:2181
+
+open producer
+kafka-console-producer.sh --broker-list localhost:9092 --topic {topic-name}
+
+open consumer
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic {topic-name} --from-beginning
+
+
+create topic
+kafka-topics.sh --zookeeper zookeeper:2181 \ --create --topic <topic_name> --partitions 1 --replication-factor 1
+
+
+delete topic 
+kafka-topics.sh --zookeeper zookeeper:2181 \ --delete --topic <topic_name>

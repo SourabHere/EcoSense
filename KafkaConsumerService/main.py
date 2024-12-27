@@ -1,19 +1,21 @@
-from kafka import KafkaConsumer
-from json import loads
-from app.services.training_service import train_model
+from fastapi import FastAPI
+from app.api import endpoints
+from app.services.consumer_service import start_consumer
+from py_eureka_client.eureka_client import EurekaClient
 
-consumer = KafkaConsumer(
-    'training_topic',
-    bootstrap_servers=['localhost:9092'],
-    group_id='model_training_group',
-    value_deserializer=lambda x: loads(x.decode('utf-8'))
+
+app = FastAPI()
+
+eureka_client = EurekaClient(
+    eureka_server="http://localhost:8761/eureka/",
+    app_name="fastapi-Kafka-Consumer-Service",
+    instance_port=8004
 )
 
-for message in consumer:
-    request = message.value
-    train_model(
-        model_name=request["model_name"],
-        start_date=request["start_date"],
-        end_date=request["end_date"],
-        data_source=request["data_source"]
-    )
+
+app.include_router(endpoints.router)
+
+@app.on_event("startup")
+async def startup_event():
+    await eureka_client.start()
+    start_consumer()

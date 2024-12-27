@@ -1,5 +1,8 @@
-fastAPI
-numpy
-pandas
-scikit-learn
+fastapi
 uvicorn
+aiokafka
+py-eureka-client
+sqlalchemy
+pymysql
+pandas
+python-dotenv

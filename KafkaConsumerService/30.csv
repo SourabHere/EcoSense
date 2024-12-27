@@ -1,0 +1,21 @@
+time,sunrise,rain_sum,snowfall_sum,weather_code,daylight_duration,sunshine_duration,temperature_2m_max,temperature_2m_min,temperature_2m_mean,et0_fao_evapotranspiration,wind_direction_10m_dominant,species_class,species_genus,species_family,species_order,scientific_name,decimal_latitude,decimal_longitude
+2024-09-01,2024-09-01T04:38,0.7,0.0,51,53526.53,38402.68,14.9,9.7,12.1,1.46,50,Insecta,Kamalia,Notodontidae,Lepidoptera,Kamalia kandyia,11.833843,75.937696
+2024-09-01,2024-09-01T04:38,0.7,0.0,51,53526.53,38402.68,14.9,9.7,12.1,1.46,50,Insecta,Callerebia,Nymphalidae,Lepidoptera,"Callerebia scanda (Kollar, 1844)",30.077059,80.233287
+2024-09-01,2024-09-01T04:38,0.7,0.0,51,53526.53,38402.68,14.9,9.7,12.1,1.46,50,Insecta,Delias,Pieridae,Lepidoptera,"Delias belladonna (Fabricius, 1793)",30.077059,80.233287
+2024-09-01,2024-09-01T04:38,0.7,0.0,51,53526.53,38402.68,14.9,9.7,12.1,1.46,50,Insecta,Pachliopta,Papilionidae,Lepidoptera,"Pachliopta aristolochiae (Fabricius, 1775)",23.548965,87.347048
+2024-09-01,2024-09-01T04:38,0.7,0.0,51,53526.53,38402.68,14.9,9.7,12.1,1.46,50,Magnoliopsida,Acalypha,Euphorbiaceae,Malpighiales,Acalypha indica L.,11.38457,79.122025
+2024-09-01,2024-09-01T04:38,0.7,0.0,51,53526.53,38402.68,14.9,9.7,12.1,1.46,50,Insecta,Papilio,Papilionidae,Lepidoptera,"Papilio agenor Linnaeus, 1758",17.745728,73.193472
+2024-09-01,2024-09-01T04:38,0.7,0.0,51,53526.53,38402.68,14.9,9.7,12.1,1.46,50,Insecta,Acisoma,Libellulidae,Odonata,"Acisoma panorpoides Rambur, 1842",27.234985,94.110653
+2024-09-01,2024-09-01T04:38,0.7,0.0,51,53526.53,38402.68,14.9,9.7,12.1,1.46,50,Insecta,Papilio,Papilionidae,Lepidoptera,"Papilio polytes Linnaeus, 1758",18.149447,73.840242
+2024-09-01,2024-09-01T04:38,0.7,0.0,51,53526.53,38402.68,14.9,9.7,12.1,1.46,50,Insecta,Pareronia,Pieridae,Lepidoptera,Pareronia hippia,19.897433,72.807205
+2024-09-01,2024-09-01T04:38,0.7,0.0,51,53526.53,38402.68,14.9,9.7,12.1,1.46,50,Magnoliopsida,Tectona,Lamiaceae,Lamiales,Tectona grandis L.f.,12.915376,77.679139
+2024-09-01,2024-09-01T04:38,0.7,0.0,51,53526.53,38402.68,14.9,9.7,12.1,1.46,50,Insecta,Ixias,Pieridae,Lepidoptera,"Ixias pyrene (Linnaeus, 1764)",19.258656,72.850247
+2024-09-01,2024-09-01T04:38,0.7,0.0,51,53526.53,38402.68,14.9,9.7,12.1,1.46,50,Insecta,Hasora,Hesperiidae,Lepidoptera,"Hasora badra (Moore, 1857)",19.258656,72.850247
+2024-09-01,2024-09-01T04:38,0.7,0.0,51,53526.53,38402.68,14.9,9.7,12.1,1.46,50,Insecta,Danaus,Nymphalidae,Lepidoptera,"Danaus genutia (Cramer, 1779)",19.259117,72.850231
+2024-09-01,2024-09-01T04:38,0.7,0.0,51,53526.53,38402.68,14.9,9.7,12.1,1.46,50,Insecta,Colotis,Pieridae,Lepidoptera,"Colotis amata (Fabricius, 1775)",19.259131,72.850269
+2024-09-01,2024-09-01T04:38,0.7,0.0,51,53526.53,38402.68,14.9,9.7,12.1,1.46,50,Insecta,Rhodothemis,Libellulidae,Odonata,"Rhodothemis rufa (Rambur, 1842)",21.758147,88.222121
+2024-09-01,2024-09-01T04:38,0.7,0.0,51,53526.53,38402.68,14.9,9.7,12.1,1.46,50,Insecta,Colotis,Pieridae,Lepidoptera,"Colotis amata (Fabricius, 1775)",19.259072,72.850169
+2024-09-01,2024-09-01T04:38,0.7,0.0,51,53526.53,38402.68,14.9,9.7,12.1,1.46,50,Insecta,Junonia,Nymphalidae,Lepidoptera,"Junonia atlites (Linnaeus, 1763)",19.259019,72.850197
+2024-09-01,2024-09-01T04:38,0.7,0.0,51,53526.53,38402.68,14.9,9.7,12.1,1.46,50,Insecta,Hypolimnas,Nymphalidae,Lepidoptera,"Hypolimnas bolina (Linnaeus, 1758)",19.259197,72.85025
+2024-09-01,2024-09-01T04:38,0.7,0.0,51,53526.53,38402.68,14.9,9.7,12.1,1.46,50,Insecta,Cepora,Pieridae,Lepidoptera,"Cepora nerissa (Fabricius, 1775)",19.259075,72.850178
+2024-09-01,2024-09-01T04:38,0.7,0.0,51,53526.53,38402.68,14.9,9.7,12.1,1.46,50,Insecta,Ixias,Pieridae,Lepidoptera,"Ixias pyrene (Linnaeus, 1764)",19.260975,72.850706

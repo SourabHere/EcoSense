@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from .routes import prediction_route
-from .models.database import Base, engine
+from .database import Base, engine
 from py_eureka_client.eureka_client import EurekaClient
 from fastapi.middleware.cors import CORSMiddleware
 

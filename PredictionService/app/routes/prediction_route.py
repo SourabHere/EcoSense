@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from ..services.kafkaService import KafkaService
 from ..services.prediction_service import PredictionService
 from ..services.modelServices import ModelFetcherService
-from ..models.database import get_db
+from ..database import get_db
 
 router = APIRouter()
 
